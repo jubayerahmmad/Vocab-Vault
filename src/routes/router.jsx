@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import LetsLearn from "../pages/LetsLearn";
 import Tutorials from "../pages/Tutorials";
 import AboutUs from "../pages/AboutUs";
+import Login from "../components/Login";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
         element: <AboutUs></AboutUs>,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login></Login>,
   },
 ]);
 export default router;
