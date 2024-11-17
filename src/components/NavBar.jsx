@@ -22,7 +22,7 @@ const NavBar = () => {
   return (
     <div className="navbar bg-cyan-100">
       <div className="w-11/12 mx-auto">
-        <div className="navbar-start">
+        <div className="navbar-start flex">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -49,7 +49,7 @@ const NavBar = () => {
           </div>
           <Link
             to="/"
-            className="btn btn-ghost text-xl text-cyan-500 font-bold"
+            className="btn btn-ghost lg:text-xl text-cyan-500 font-bold"
           >
             <img className="w-8 h-8" src={logo} alt="" />
             Vocab Vault
@@ -60,7 +60,7 @@ const NavBar = () => {
         </div>
         <div className="navbar-end text-right">
           <Link to="/login">
-            <button className="btn btn-outline text-cyan-700 text-center">
+            <button className="btn btn-outline text-cyan-700 text-center btn-sm lg:btn-md">
               <CiLogin size={24}></CiLogin> Login
             </button>
           </Link>
