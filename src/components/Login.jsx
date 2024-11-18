@@ -1,10 +1,12 @@
 import { Helmet } from "react-helmet-async";
 import logo from "../assets/reading.png";
 import { Link } from "react-router-dom";
-import { FaGoogle } from "react-icons/fa6";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa6";
 import { CiLogin } from "react-icons/ci";
+import { useState } from "react";
 
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false);
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -16,11 +18,10 @@ const Login = () => {
       <Helmet>
         <title>Register | Vocab Vault</title>
       </Helmet>
-      <div className="flex flex-col justify-center items-center gap-6 py-4">
+      <div className="flex flex-col justify-center items-center gap-4 py-4">
         <img className="w-24 h-24" src={logo} alt="" />
-        <h1 className="text-3xl font-bold text-center ">
-          Welcome back !!! Login to Our Website
-        </h1>
+        <h1 className="text-3xl font-bold text-center ">Welcome back !</h1>
+        <p className="text-center font-bold text-3xl">Login to Our Website</p>
       </div>
 
       {/* form */}
@@ -39,17 +40,28 @@ const Login = () => {
               required
             />
           </div>
-          <div className="form-control">
+          <div className="form-control relative">
             <label className="label">
               <span className="label-text font-semibold">Password</span>
             </label>
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               placeholder="Password"
               name="password"
               className="input input-bordered rounded-md bg-transparent"
               required
             />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="btn-xs absolute right-1 bottom-10 "
+            >
+              {showPassword ? (
+                <FaEye size={20}></FaEye>
+              ) : (
+                <FaEyeSlash size={20}></FaEyeSlash>
+              )}
+            </button>
             <label className="label">
               <a
                 href="#"

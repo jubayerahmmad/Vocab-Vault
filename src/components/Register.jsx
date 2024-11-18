@@ -1,9 +1,11 @@
+import { useState } from "react";
 import logo from "../assets/reading.png";
 import { Helmet } from "react-helmet-async";
-import { FaGoogle } from "react-icons/fa6";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Register = () => {
+  const [showPassword, setShowPassword] = useState(false);
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -35,7 +37,6 @@ const Register = () => {
               placeholder="Name"
               name="name"
               className="input input-bordered rounded-md  bg-transparent"
-              required
             />
           </div>
           <div className="form-control">
@@ -47,7 +48,6 @@ const Register = () => {
               placeholder="Photo URL"
               name="photo"
               className="input input-bordered rounded-md  bg-transparent"
-              required
             />
           </div>
           <div className="form-control">
@@ -62,20 +62,31 @@ const Register = () => {
               required
             />
           </div>
-          <div className="form-control">
+          <div className="form-control relative">
             <label className="label">
               <span className="label-text font-semibold">Password</span>
             </label>
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               placeholder="Password"
               name="password"
               className="input input-bordered rounded-md bg-transparent"
               required
             />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="btn-xs absolute right-1 bottom-2"
+            >
+              {showPassword ? (
+                <FaEye size={20}></FaEye>
+              ) : (
+                <FaEyeSlash size={20}></FaEyeSlash>
+              )}
+            </button>
           </div>
           <div className="form-control mt-6 space-y-4">
-            <button className="btn btn-outline">Register</button>
+            <button className="btn btn-outline text-cyan-500">Register</button>
             <button className="btn btn-outline">
               <FaGoogle size={28}></FaGoogle> Register With Google
             </button>
