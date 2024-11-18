@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import WordsCard from "./WordsCard";
 
 const ViewLesson = () => {
@@ -7,8 +7,6 @@ const ViewLesson = () => {
   const lessons = useLoaderData();
   const { lesson_no } = useParams();
   const lessonNumber = parseInt(lesson_no);
-  //   console.log(lessons);
-  //   console.log(lessonNumber);
 
   useEffect(() => {
     const mappedLesson = lessons.map((lesson) => {
@@ -30,6 +28,13 @@ const ViewLesson = () => {
         {lesson?.map((words) => (
           <WordsCard key={words.id} words={words}></WordsCard>
         ))}
+      </div>
+      <div>
+        <Link to="/letsLearn">
+          <button className="btn btn-md text-cyan-600 btn-outline mb-4 rounded-md">
+            Back to Lesson
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -1,8 +1,29 @@
 import { FaUser } from "react-icons/fa6";
 import { MdOutlinePersonalVideo, MdOutlinePlayLesson } from "react-icons/md";
 import { TbVocabulary } from "react-icons/tb";
+import { useSpring, animated } from "react-spring";
 
 const Success = () => {
+  const user = useSpring({
+    from: { number: 0 },
+    to: { number: 1500 },
+    config: { duration: 2500 },
+  });
+  const vocabulary = useSpring({
+    from: { number: 3500 },
+    to: { number: 4000 },
+    config: { duration: 2000 },
+  });
+  const tutorials = useSpring({
+    from: { number: 0 },
+    to: { number: 25 },
+    config: { duration: 3000 },
+  });
+  const lessons = useSpring({
+    from: { number: 0 },
+    to: { number: 30 },
+    config: { duration: 3500 },
+  });
   return (
     <div>
       <h1 className="text-3xl font-bold text-center mb-6">Success</h1>
@@ -12,7 +33,9 @@ const Success = () => {
             <FaUser size={48} color="cyan"></FaUser>
           </div>
           <div>
-            <p className="text-2xl font-bold">1500+</p>
+            <animated.div className="text-2xl font-bold">
+              {user.number.to((n) => `${n.toFixed(0)} +`)}
+            </animated.div>
           </div>
           <h3 className="text-xl font-semibold">Total User</h3>
         </div>
@@ -21,7 +44,9 @@ const Success = () => {
             <TbVocabulary size={48} color="cyan"></TbVocabulary>
           </div>
           <div>
-            <p className="text-2xl font-bold">5000+</p>
+            <animated.div className="text-2xl font-bold">
+              {vocabulary.number.to((n) => `${n.toFixed(0)} +`)}
+            </animated.div>
           </div>
           <h3 className="text-xl font-semibold">Vocabulary</h3>
         </div>
@@ -33,7 +58,9 @@ const Success = () => {
             ></MdOutlinePersonalVideo>
           </div>
           <div>
-            <p className="text-2xl font-bold">15+</p>
+            <animated.div className="text-2xl font-bold">
+              {tutorials.number.to((n) => `${n.toFixed(0)} +`)}
+            </animated.div>
           </div>
           <h3 className="text-xl font-semibold">Tutorials</h3>
         </div>
@@ -42,7 +69,9 @@ const Success = () => {
             <MdOutlinePlayLesson size={48} color="cyan"></MdOutlinePlayLesson>
           </div>
           <div>
-            <p className="text-2xl font-bold">25+</p>
+            <animated.div className="text-2xl font-bold">
+              {lessons.number.to((n) => `${n.toFixed(0)} +`)}
+            </animated.div>
           </div>
           <h3 className="text-xl font-semibold">Lessons</h3>
         </div>
