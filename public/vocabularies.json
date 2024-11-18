@@ -71,7 +71,7 @@
     "pronunciation": "bweh-nohs dee-ahs",
     "meaning": "good morning",
     "part_of_speech": "phrase",
-    "difficulty": "easy",
+    "difficulty": "medium",
     "lesson_no": 1,
     "when_to_say": "Used as a greeting in the morning until noon",
     "example": "¡Buenos días! ¿Cómo amaneciste? (bweh-nohs dee-ahs koh-moh ah-mah-neh-see-steh) - Good morning! How did you wake up?"
@@ -82,7 +82,7 @@
     "pronunciation": "bweh-nahs noh-chehs",
     "meaning": "good night",
     "part_of_speech": "phrase",
-    "difficulty": "easy",
+    "difficulty": "hard",
     "lesson_no": 1,
     "when_to_say": "Used as a greeting or farewell in the evening/night",
     "example": "Buenas noches, hasta mañana (bweh-nahs noh-chehs, ah-stah mah-nyah-nah) - Good night, see you tomorrow"
@@ -126,7 +126,7 @@
     "pronunciation": "eh-yah",
     "meaning": "she",
     "part_of_speech": "pronoun",
-    "difficulty": "easy",
+    "difficulty": "medium",
     "lesson_no": 1,
     "when_to_say": "Used when referring to a female person",
     "example": "Ella es mi hermana (eh-yah ehs mee ehr-mah-nah) - She is my sister"
@@ -170,7 +170,7 @@
     "pronunciation": "ah-stah lweh-goh",
     "meaning": "see you later",
     "part_of_speech": "phrase",
-    "difficulty": "easy",
+    "difficulty": "hard",
     "lesson_no": 1,
     "when_to_say": "Used when saying goodbye with the intention to meet again",
     "example": "¡Hasta luego, amigo! (ah-stah lweh-goh, ah-mee-goh) - See you later, friend!"
@@ -258,7 +258,7 @@
     "pronunciation": "mahn-sah-nah",
     "meaning": "apple",
     "part_of_speech": "noun",
-    "difficulty": "easy",
+    "difficulty": "medium",
     "lesson_no": 2,
     "when_to_say": "Used when referring to apples",
     "example": "La manzana está roja (lah mahn-sah-nah eh-stah roh-hah) - The apple is red"
@@ -280,7 +280,7 @@
     "pronunciation": "weh-voh",
     "meaning": "egg",
     "part_of_speech": "noun",
-    "difficulty": "easy",
+    "difficulty": "hard",
     "lesson_no": 2,
     "when_to_say": "Used when referring to eggs",
     "example": "Quiero dos huevos (kyeh-roh dohs weh-vohs) - I want two eggs"
@@ -379,7 +379,7 @@
     "pronunciation": "eh-lah-doh",
     "meaning": "ice cream",
     "part_of_speech": "noun",
-    "difficulty": "easy",
+    "difficulty": "hard",
     "lesson_no": 2,
     "when_to_say": "Used when referring to ice cream",
     "example": "Quiero un helado de chocolate (kyeh-roh oon eh-lah-doh deh choh-koh-lah-teh) - I want a chocolate ice cream"
@@ -699,7 +699,7 @@
     "pronunciation": "meh-dee-ah-noh-cheh",
     "meaning": "midnight",
     "part_of_speech": "noun",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "lesson_no": 4,
     "when_to_say": "Used when referring to midnight",
     "example": "A medianoche (ah meh-dee-ah-noh-cheh) - At midnight"
@@ -754,7 +754,7 @@
     "pronunciation": "ah-nyoh",
     "meaning": "year",
     "part_of_speech": "noun",
-    "difficulty": "easy",
+    "difficulty": "medium",
     "lesson_no": 4,
     "when_to_say": "Used when referring to a year",
     "example": "Feliz año nuevo (feh-lees ah-nyoh nweh-boh) - Happy new year"
@@ -908,7 +908,7 @@
     "pronunciation": "nweh-boh",
     "meaning": "new",
     "part_of_speech": "adjective",
-    "difficulty": "easy",
+    "difficulty": "medium",
     "lesson_no": 5,
     "when_to_say": "Used when describing something that is new",
     "example": "Un coche nuevo (oon koh-cheh nweh-boh) - A new car"
@@ -919,7 +919,7 @@
     "pronunciation": "byeh-hoh",
     "meaning": "old",
     "part_of_speech": "adjective",
-    "difficulty": "easy",
+    "difficulty": "hard",
     "lesson_no": 5,
     "when_to_say": "Used when describing something that is old",
     "example": "Un libro viejo (oon lee-broh byeh-hoh) - An old book"
@@ -1040,7 +1040,7 @@
     "pronunciation": "ah-BWEH-loh",
     "meaning": "grandfather",
     "part_of_speech": "noun",
-    "difficulty": "easy",
+    "difficulty": "medium",
     "lesson_no": 6,
     "when_to_say": "When referring to your male grandparent",
     "example": "Mi abuelo cuenta historias interesantes (My grandfather tells interesting stories) [mee ah-BWEH-loh KWEN-tah ees-TOR-ee-as een-teh-reh-SAN-tes]"

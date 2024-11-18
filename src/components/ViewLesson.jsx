@@ -23,7 +23,7 @@ const ViewLesson = () => {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold text-center my-4">
+      <h1 className="text-3xl font-bold text-center my-4 underline decoration-cyan-400 underline-offset-2 animate__animated animate__fadeInDown">
         Lesson No - {lessonNumber}
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-12">

@@ -1,20 +1,14 @@
 import React from "react";
+import Modal from "./Modal";
+import { Link } from "react-router-dom";
 
 const WordsCard = ({ words }) => {
   //   console.log(word);
-  const {
-    word,
-    pronunciation,
-    part_of_speech,
-    meaning,
-    difficulty,
-    example,
-    when_to_say,
-  } = words;
+  const { word, pronunciation, part_of_speech, meaning, difficulty } = words;
   return (
     <div>
       <div
-        className={`card border-2 shadow-md animate__animated animate__fadeInLeft h-[550px] ${
+        className={`card backdrop-blur-xl shadow-md animate__animated animate__fadeInLeft  ${
           difficulty === "easy"
             ? "bg-green-200"
             : difficulty === "medium"
@@ -22,16 +16,37 @@ const WordsCard = ({ words }) => {
             : "bg-red-200"
         }`}
       >
-        <div className="card-body">
-          <h2 className="text-lg font-bold">{word}</h2>
-          <p className="">Pronunciation: {pronunciation}</p>
-          <p className="">Part of Speech: {part_of_speech}</p>
-          <p className="">Meaning: {meaning}</p>
-          <p className="">Difficulty: {difficulty}</p>
-          <p className="">Example: {example}</p>
-          <p className="">When to Say: {when_to_say}</p>
+        <div className="m-4 p-4 rounded-lg border-2 border-cyan-600 space-y-4">
+          <h2 className="text-2xl font-extrabold italic">
+            {word.toUpperCase()}
+          </h2>
+          <p className="">
+            <span className="font-semibold">Pronunciation:</span>{" "}
+            {pronunciation}
+          </p>
+          <p className="">
+            <span className="font-semibold">Meaning:</span> {meaning}
+          </p>
+          <p className="">
+            <span className="font-semibold">Part of Speech:</span>{" "}
+            {part_of_speech}
+          </p>
+          <div className="flex gap-4">
+            <button
+              onClick={() => document.getElementById("my_modal_5").showModal()}
+              className="btn btn-sm btn-outline rounded-md"
+            >
+              When to Say
+            </button>
+            <Link to="/letsLearn">
+              <button className="btn btn-sm btn-outline btn-accent rounded-md">
+                Back to Lesson
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
+      <Modal words={words}></Modal>
     </div>
   );
 };

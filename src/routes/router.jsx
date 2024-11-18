@@ -6,6 +6,7 @@ import Tutorials from "../pages/Tutorials";
 import AboutUs from "../pages/AboutUs";
 import Login from "../components/Login";
 import ViewLesson from "../components/ViewLesson";
+import ErrorPage from "../components/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <h2>Error</h2>,
+    element: <ErrorPage></ErrorPage>,
   },
 ]);
 export default router;

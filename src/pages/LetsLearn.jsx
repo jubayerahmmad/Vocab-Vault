@@ -40,6 +40,29 @@ const LetsLearn = () => {
           ))}
         </div>
       </div>
+      {/* tutorial */}
+      <div className="my-8">
+        <h1 className="text-3xl font-bold text-center my-6 animate__animated animate__fadeInDown">
+          Tutorial
+        </h1>
+        <div className="my-8">
+          <iframe
+            height="615"
+            src="https://www.youtube.com/embed/kJQjXAVEWt0?si=PrcSfF4beFsGtWqA"
+            title="YouTube video player"
+            className="w-full rounded-xl"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <Link to="/tutorials">
+          <button className="btn btn-outline text-cyan-500">
+            View More Tutorials
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };
