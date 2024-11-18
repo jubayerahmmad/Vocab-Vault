@@ -1,10 +1,9 @@
-import { Helmet } from "react-helmet-async";
 import logo from "../assets/reading.png";
-import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { FaGoogle } from "react-icons/fa6";
-import { CiLogin } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
-const Login = () => {
+const Register = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -14,12 +13,12 @@ const Login = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
       <Helmet>
-        <title>Register | Vocab Vault</title>
+        <title>Login | Vocab Vault</title>
       </Helmet>
       <div className="flex flex-col justify-center items-center gap-6 py-4">
         <img className="w-24 h-24" src={logo} alt="" />
         <h1 className="text-3xl font-bold text-center ">
-          Welcome back !!! Login to Our Website
+          Register to Our Website
         </h1>
       </div>
 
@@ -27,6 +26,30 @@ const Login = () => {
 
       <div className="card rounded-md bg-base-100 shadow-2xl w-full max-w-lg mx-auto">
         <form className="card-body" onSubmit={handleLogin}>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text font-semibold">Name</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Name"
+              name="name"
+              className="input input-bordered rounded-md  bg-transparent"
+              required
+            />
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text font-semibold">Photo URL</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Photo URL"
+              name="photo"
+              className="input input-bordered rounded-md  bg-transparent"
+              required
+            />
+          </div>
           <div className="form-control">
             <label className="label">
               <span className="label-text font-semibold">Email</span>
@@ -50,28 +73,18 @@ const Login = () => {
               className="input input-bordered rounded-md bg-transparent"
               required
             />
-            <label className="label">
-              <a
-                href="#"
-                className="label-text-alt link link-hover font-semibold"
-              >
-                Forgot password?
-              </a>
-            </label>
           </div>
           <div className="form-control mt-6 space-y-4">
-            <button className="btn btn-outline text-cyan-500">
-              <CiLogin size={24}></CiLogin> Login
-            </button>
-            <button className="btn btn-outline ">
-              <FaGoogle size={28}></FaGoogle> Login With Google
+            <button className="btn btn-outline">Register</button>
+            <button className="btn btn-outline">
+              <FaGoogle size={28}></FaGoogle> Register With Google
             </button>
           </div>
         </form>
         <p className="text-center p-6">
-          New to Website?{" "}
-          <Link to="/register" className="font-bold text-cyan-950">
-            Register
+          Already Have an Account?{" "}
+          <Link to="/login" className="font-bold text-cyan-950">
+            Login
           </Link>
         </p>
       </div>
@@ -79,4 +92,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

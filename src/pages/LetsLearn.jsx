@@ -45,7 +45,7 @@ const LetsLearn = () => {
         <h1 className="text-3xl font-bold text-center my-6 animate__animated animate__fadeInDown">
           Tutorial
         </h1>
-        <div className="my-8">
+        <div className="my-8 border rounded-xl p-4">
           <iframe
             height="615"
             src="https://www.youtube.com/embed/kJQjXAVEWt0?si=PrcSfF4beFsGtWqA"
