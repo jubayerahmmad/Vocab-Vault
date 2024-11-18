@@ -429,39 +429,6 @@
     "example": "La cocina está limpia (lah koh-see-nah ehs-tah leem-pee-ah) - The kitchen is clean"
   },
   {
-    "id": "L3W1",
-    "word": "casa",
-    "pronunciation": "kah-sah",
-    "meaning": "house",
-    "part_of_speech": "noun",
-    "difficulty": "easy",
-    "lesson_no": 3,
-    "when_to_say": "Used when referring to a house or home",
-    "example": "Mi casa es grande (mee kah-sah ehs grahn-deh) - My house is big"
-  },
-  {
-    "id": "L3W2",
-    "word": "habitación",
-    "pronunciation": "ah-bee-tah-see-ohn",
-    "meaning": "room",
-    "part_of_speech": "noun",
-    "difficulty": "medium",
-    "lesson_no": 3,
-    "when_to_say": "Used when referring to a room",
-    "example": "Esta es mi habitación (ehs-tah ehs mee ah-bee-tah-see-ohn) - This is my room"
-  },
-  {
-    "id": "L3W3",
-    "word": "cocina",
-    "pronunciation": "koh-see-nah",
-    "meaning": "kitchen",
-    "part_of_speech": "noun",
-    "difficulty": "easy",
-    "lesson_no": 3,
-    "when_to_say": "Used when referring to a kitchen",
-    "example": "La cocina está limpia (lah koh-see-nah ehs-tah leem-pee-ah) - The kitchen is clean"
-  },
-  {
     "id": "L3W4",
     "word": "baño",
     "pronunciation": "bah-nyoh",
@@ -626,17 +593,7 @@
     "when_to_say": "Used when referring to a bookshelf",
     "example": "Los libros están en la estantería (lohs lee-brohs ehs-tahn ehn lah ehs-tahn-teh-ree-ah) - The books are on the bookshelf"
   },
-  {
-    "id": "L4W1",
-    "word": "uno",
-    "pronunciation": "oo-noh",
-    "meaning": "one",
-    "part_of_speech": "number",
-    "difficulty": "easy",
-    "lesson_no": 4,
-    "when_to_say": "Used when counting or referring to the number one",
-    "example": "Quiero uno más (kyeh-roh oo-noh mahs) - I want one more"
-  },
+
   {
     "id": "L4W1",
     "word": "uno",

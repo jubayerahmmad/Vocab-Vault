@@ -7,13 +7,13 @@ const About = () => {
       <div className="p-6 rounded-lg my-8 border space-y-4 lg:flex items-center gap-6">
         <div className="">
           <img
-            className="rounded-lg animate__animated animate__fadeInLeft"
+            className="rounded-lg animate__animated animate__fadeInLeft animate__delay-1s"
             src={homeAbout}
             alt=""
           />
         </div>
         <div className="space-y-6">
-          <h3 className="text-2xl lg:text-4xl font-bold animate__animated animate__fadeInDown">
+          <h3 className="text-2xl lg:text-4xl font-bold animate__animated animate__fadeInDown animate__delay-1s">
             Our Mission
           </h3>
           <p>

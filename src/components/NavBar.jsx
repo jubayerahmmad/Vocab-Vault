@@ -20,7 +20,7 @@ const NavBar = () => {
     </>
   );
   return (
-    <div className="navbar bg-cyan-100">
+    <div className="navbar bg-cyan-100 sticky top-0 z-10">
       <div className="w-11/12 mx-auto">
         <div className="navbar-start flex">
           <div className="dropdown">

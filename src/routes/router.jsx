@@ -5,6 +5,7 @@ import LetsLearn from "../pages/LetsLearn";
 import Tutorials from "../pages/Tutorials";
 import AboutUs from "../pages/AboutUs";
 import Login from "../components/Login";
+import ViewLesson from "../components/ViewLesson";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
       {
         path: "/letsLearn",
         element: <LetsLearn></LetsLearn>,
+        loader: () => fetch("../lessons.json"),
       },
       {
         path: "/tutorials",
@@ -27,11 +29,20 @@ const router = createBrowserRouter([
         path: "/about",
         element: <AboutUs></AboutUs>,
       },
+      {
+        path: "/lesson/:lesson_no",
+        element: <ViewLesson></ViewLesson>,
+        loader: () => fetch("../vocabularies.json"),
+      },
     ],
   },
   {
     path: "/login",
     element: <Login></Login>,
+  },
+  {
+    path: "*",
+    element: <h2>Error</h2>,
   },
 ]);
 export default router;
