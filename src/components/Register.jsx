@@ -1,21 +1,57 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import logo from "../assets/reading.png";
 import { Helmet } from "react-helmet-async";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const { createUser, updateUserProfile } = useContext(AuthContext);
+  const navigate = useNavigate();
+
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
+    const name = e.target.name.value;
+    const photo = e.target.photo.value;
+
+    //  password validations
+    if (password.length < 6) {
+      setErrorMessage("Password Must Contain atleast 6 Characters!");
+      return;
+    }
+    const hasLowercase = /(?=.*[a-z])/;
+    if (!hasLowercase.test(password)) {
+      setErrorMessage("Password Must Contain atleast One LowerCase letter!");
+      return;
+    }
+    const hasUppercase = /(?=.*[A-Z])/;
+    if (!hasUppercase.test(password)) {
+      setErrorMessage("Password Must Contain atleast One UpperCase letter!");
+      return;
+    }
+
+    // create user
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+        e.target.reset();
+        // update profile
+        const profileInfo = { displayName: name, photoURL: photo };
+        updateUserProfile(profileInfo).catch((error) => {
+          setErrorMessage(error.message);
+        });
+        navigate("/");
+      })
+      .catch((error) => setErrorMessage(error.code.split("/")[1]));
   };
   return (
     <div className="bg-gray-50 min-h-screen">
       <Helmet>
-        <title>Login | Vocab Vault</title>
+        <title>Register | Vocab Vault</title>
       </Helmet>
       <div className="flex flex-col justify-center items-center gap-6 py-4">
         <img className="w-24 h-24" src={logo} alt="" />
@@ -28,6 +64,9 @@ const Register = () => {
 
       <div className="card rounded-md bg-base-100 shadow-2xl w-full max-w-lg mx-auto">
         <form className="card-body" onSubmit={handleLogin}>
+          {errorMessage && (
+            <p className="font-bold text-red-500 text-center">{errorMessage}</p>
+          )}
           <div className="form-control">
             <label className="label">
               <span className="label-text font-semibold">Name</span>
@@ -92,8 +131,9 @@ const Register = () => {
             </button>
           </div>
         </form>
+
         <p className="text-center p-6">
-          Already Have an Account?{" "}
+          Already Have an Account?
           <Link to="/login" className="font-bold text-cyan-950">
             Login
           </Link>

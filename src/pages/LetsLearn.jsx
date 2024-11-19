@@ -2,9 +2,12 @@ import { Helmet } from "react-helmet-async";
 
 import CommonBanner from "../components/CommonBanner";
 import { Link, useLoaderData } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../providers/AuthProvider";
 
 const LetsLearn = () => {
   const lessons = useLoaderData();
+  const { user } = useContext(AuthContext);
 
   return (
     <div>
@@ -53,8 +56,8 @@ const LetsLearn = () => {
             className="w-full rounded-xl"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
           ></iframe>
         </div>
         <Link to="/tutorials">
@@ -67,4 +70,6 @@ const LetsLearn = () => {
   );
 };
 
+// {`${user ? `/tutorials` : "/login"}`}
+// {`${user ? `/lesson/${lesson.id}` : "/login"}`}
 export default LetsLearn;

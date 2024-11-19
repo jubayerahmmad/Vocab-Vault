@@ -8,6 +8,8 @@ import Login from "../components/Login";
 import ViewLesson from "../components/ViewLesson";
 import ErrorPage from "../components/ErrorPage";
 import Register from "../components/Register";
+import MyProfile from "../pages/MyProfile";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -25,15 +27,31 @@ const router = createBrowserRouter([
       },
       {
         path: "/tutorials",
-        element: <Tutorials></Tutorials>,
+        element: (
+          <PrivateRoute>
+            <Tutorials></Tutorials>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/about",
         element: <AboutUs></AboutUs>,
       },
       {
+        path: "/my-profile",
+        element: (
+          <PrivateRoute>
+            <MyProfile></MyProfile>
+          </PrivateRoute>
+        ),
+      },
+      {
         path: "/lesson/:lesson_no",
-        element: <ViewLesson></ViewLesson>,
+        element: (
+          <PrivateRoute>
+            <ViewLesson></ViewLesson>
+          </PrivateRoute>
+        ),
         loader: () => fetch("../vocabularies.json"),
       },
     ],
@@ -46,6 +64,7 @@ const router = createBrowserRouter([
     path: "/register",
     element: <Register></Register>,
   },
+
   {
     path: "*",
     element: <ErrorPage></ErrorPage>,

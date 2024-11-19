@@ -1,33 +1,56 @@
 import { Helmet } from "react-helmet-async";
 import logo from "../assets/reading.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa6";
 import { CiLogin } from "react-icons/ci";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Login = () => {
+  const { loginUser, setUser } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const { state } = useLocation();
+  const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(email, password);
+
+    loginUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+        setUser(result.user);
+        navigate(`${state ? state : "/"}`);
+      })
+      .catch((error) => {
+        console.log(error.code);
+        setErrorMessage(error.code.split("/")[1]);
+      });
   };
   return (
     <div className="bg-gray-50 min-h-screen">
       <Helmet>
-        <title>Register | Vocab Vault</title>
+        <title>Login | Vocab Vault</title>
       </Helmet>
-      <div className="flex flex-col justify-center items-center gap-4 py-4">
+      <div className="flex flex-col justify-center items-center gap-4 p-4">
         <img className="w-24 h-24" src={logo} alt="" />
-        <h1 className="text-3xl font-bold text-center ">Welcome back !</h1>
-        <p className="text-center font-bold text-3xl">Login to Our Website</p>
+        <h1 className="text-3xl font-bold text-center italic">
+          Welcome back !
+        </h1>
+        <p className="text-center font-bold text-2xl">
+          Please, Login to Our check Lessons and Tutorials from our Website
+        </p>
       </div>
 
       {/* form */}
 
       <div className="card rounded-md bg-base-100 shadow-2xl w-full max-w-lg mx-auto">
         <form className="card-body" onSubmit={handleLogin}>
+          {errorMessage && (
+            <p className="font-bold text-red-500 text-center">{errorMessage}</p>
+          )}
           <div className="form-control">
             <label className="label">
               <span className="label-text font-semibold">Email</span>
