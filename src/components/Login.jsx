@@ -7,7 +7,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 
 const Login = () => {
-  const { loginUser, setUser } = useContext(AuthContext);
+  const { loginUser, setUser, googleLogin } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const { state } = useLocation();
@@ -18,6 +18,7 @@ const Login = () => {
     const password = e.target.password.value;
     console.log(email, password);
 
+    //login
     loginUser(email, password)
       .then((result) => {
         console.log(result.user);
@@ -25,10 +26,22 @@ const Login = () => {
         navigate(`${state ? state : "/"}`);
       })
       .catch((error) => {
-        console.log(error.code);
+        // console.log(error.code);
         setErrorMessage(error.code.split("/")[1]);
       });
   };
+
+  //google login
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then(() => {
+        navigate(`${state ? state : "/"}`);
+      })
+      .catch((error) => {
+        setErrorMessage(error.code.split("/")[1]);
+      });
+  };
+
   return (
     <div className="bg-gray-50 min-h-screen">
       <Helmet>
@@ -98,9 +111,16 @@ const Login = () => {
             <button className="btn btn-outline text-cyan-500">
               <CiLogin size={24}></CiLogin> Login
             </button>
-            <button className="btn btn-outline ">
+            <button
+              type="button"
+              onClick={handleGoogleLogin}
+              className="btn btn-outline "
+            >
               <FaGoogle size={28}></FaGoogle> Login With Google
             </button>
+            <Link to="/">
+              <button className="btn btn-outline w-full">Back to Home</button>
+            </Link>
           </div>
         </form>
         <p className="text-center p-6">

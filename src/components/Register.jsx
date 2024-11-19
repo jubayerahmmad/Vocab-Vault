@@ -41,13 +41,17 @@ const Register = () => {
         e.target.reset();
         // update profile
         const profileInfo = { displayName: name, photoURL: photo };
-        updateUserProfile(profileInfo).catch((error) => {
-          setErrorMessage(error.message);
-        });
-        navigate("/");
+        updateUserProfile(profileInfo)
+          .then(() => {
+            navigate("/");
+          })
+          .catch((error) => {
+            setErrorMessage(error.message);
+          });
       })
       .catch((error) => setErrorMessage(error.code.split("/")[1]));
   };
+
   return (
     <div className="bg-gray-50 min-h-screen">
       <Helmet>
@@ -126,9 +130,9 @@ const Register = () => {
           </div>
           <div className="form-control mt-6 space-y-4">
             <button className="btn btn-outline text-cyan-500">Register</button>
-            <button className="btn btn-outline">
-              <FaGoogle size={28}></FaGoogle> Register With Google
-            </button>
+            <Link to="/">
+              <button className="btn btn-outline w-full">Back to Home</button>
+            </Link>
           </div>
         </form>
 

@@ -46,7 +46,7 @@ const NavBar = () => {
     <div className="bg-cyan-100 sticky top-0 z-10">
       {user && (
         <h3 className="font-bold text-3xl text-center p-2 italic">
-          Welcome , {user.displayName}!
+          Welcome Back, {user.displayName}!
         </h3>
       )}
       <div className="navbar bg-cyan-100 sticky top-0 z-10">
@@ -94,12 +94,14 @@ const NavBar = () => {
           <div className="navbar-end text-right">
             {user ? (
               <div className="flex items-center justify-end gap-2">
-                <div className="p-2 rounded-full border-2 border-cyan-500">
-                  <img
-                    className="h-4 w-4 lg:h-8 lg:w-8 rounded-full"
-                    src={user.photoURL}
-                    alt=""
-                  />
+                <div className="p-1 rounded-full border-2 border-cyan-500">
+                  <Link to="/my-profile">
+                    <img
+                      className="h-4 w-4 lg:h-10 lg:w-10 rounded-full"
+                      src={user.photoURL}
+                      alt=""
+                    />
+                  </Link>
                 </div>
                 <Link>
                   <button
