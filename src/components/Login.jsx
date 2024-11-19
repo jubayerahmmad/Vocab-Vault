@@ -53,7 +53,7 @@ const Login = () => {
           Welcome back !
         </h1>
         <p className="text-center font-bold text-2xl">
-          Please, Login to Our check Lessons and Tutorials from our Website
+          Log in to access your vocabulary vault!
         </p>
       </div>
 
