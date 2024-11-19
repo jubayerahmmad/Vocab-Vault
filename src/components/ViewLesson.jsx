@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import WordsCard from "./WordsCard";
+import { AuthContext } from "../providers/AuthProvider";
 
 const ViewLesson = () => {
   const [lesson, setLesson] = useState([]);
   const lessons = useLoaderData();
   const { lesson_no } = useParams();
   const lessonNumber = parseInt(lesson_no);
+  const { user } = useContext(AuthContext);
 
   useEffect(() => {
     const mappedLesson = lessons.map((lesson) => {
@@ -22,7 +24,7 @@ const ViewLesson = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold text-center my-4 underline decoration-cyan-400 underline-offset-2 animate__animated animate__fadeInDown">
-        Lesson No - {lessonNumber}
+        Welcome {user?.displayName} to Lesson No - {lessonNumber}
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-12">
         {lesson?.map((words) => (

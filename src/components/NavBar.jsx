@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import logo from "../assets/reading.png";
 import "../../src/navbar.css";
 import { useContext } from "react";
@@ -6,6 +6,8 @@ import { AuthContext } from "../providers/AuthProvider";
 import toast from "react-hot-toast";
 const NavBar = () => {
   const { user, logOutUser } = useContext(AuthContext);
+  const location = useLocation();
+  // console.log(location);
   // console.log(user);
 
   const handleLogout = () => {
@@ -44,7 +46,7 @@ const NavBar = () => {
 
   return (
     <div className="bg-cyan-100 sticky top-0 z-10">
-      {user && (
+      {user && location.pathname === "/" && (
         <h3 className="font-bold text-3xl text-center p-2 italic">
           Welcome Back, {user.displayName}!
         </h3>
@@ -106,7 +108,7 @@ const NavBar = () => {
                 <Link>
                   <button
                     onClick={handleLogout}
-                    className="btn btn-outline font-bold text-white bg-cyan-500 text-center btn-sm lg:btn-md"
+                    className="btn btn-outline font-bold text-white bg-cyan-500 text-center btn-sm lg:btn-md hover:bg-cyan-700 transition duration-300"
                   >
                     Log Out
                   </button>
@@ -115,7 +117,7 @@ const NavBar = () => {
             ) : (
               <>
                 <Link to="/login">
-                  <button className="btn btn-outline font-bold text-white bg-cyan-500 text-center btn-sm lg:btn-md">
+                  <button className="btn btn-outline font-bold text-white bg-cyan-500 text-center btn-sm lg:btn-md hover:bg-cyan-700 transition duration-300">
                     Login
                   </button>
                 </Link>
