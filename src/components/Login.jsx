@@ -3,7 +3,7 @@ import logo from "../assets/reading.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa6";
 import { CiLogin } from "react-icons/ci";
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import toast from "react-hot-toast";
 
@@ -12,6 +12,7 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const { state } = useLocation();
+  const emailRef = useRef("");
   const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
@@ -44,6 +45,13 @@ const Login = () => {
       });
   };
 
+  // forgot password
+
+  const handleForgotPassword = () => {
+    const email = emailRef.current.value;
+    navigate("/forgot-password", { state: { email } });
+  };
+
   return (
     <div className="bg-gray-50 min-h-screen">
       <Helmet>
@@ -73,6 +81,7 @@ const Login = () => {
             <input
               type="email"
               placeholder="Email"
+              ref={emailRef}
               name="email"
               className="input input-bordered rounded-md  bg-transparent"
               required
@@ -101,12 +110,13 @@ const Login = () => {
               )}
             </button>
             <label className="label">
-              <a
-                href="#"
+              <button
+                type="button"
+                onClick={handleForgotPassword}
                 className="label-text-alt link link-hover font-semibold"
               >
                 Forgot password?
-              </a>
+              </button>
             </label>
           </div>
           <div className="form-control mt-6 space-y-4">

@@ -18,40 +18,40 @@ const AuthProvider = ({ children }) => {
 
   // create user
   const createUser = (email, password) => {
-    // setLoader(true);
+    setLoader(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   // update profile
 
   const updateUserProfile = (profileInfo) => {
-    // setLoader(true);
+    setLoader(true);
     return updateProfile(auth.currentUser, profileInfo);
   };
 
   // login user with email & password
   const loginUser = (email, password) => {
-    // setLoader(true);
+    setLoader(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
   // login user with google
 
   const googleProvider = new GoogleAuthProvider();
   const googleLogin = () => {
-    // setLoader(true);
+    setLoader(true);
     return signInWithPopup(auth, googleProvider);
   };
 
   // logout user
   const logOutUser = () => {
-    // setLoader(true);
+    setLoader(true);
     return signOut(auth);
   };
 
   useEffect(() => {
     const unSubscrbe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
-        console.log(currentUser);
+        // console.log(currentUser);
         setUser(currentUser);
       } else {
         setUser(null);

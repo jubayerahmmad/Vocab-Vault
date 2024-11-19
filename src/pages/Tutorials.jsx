@@ -130,12 +130,7 @@ const Tutorials = () => {
           ></iframe>
         </div>
       </div>
-      <div className="mb-4 flex justify-between">
-        <Link to="/letsLearn">
-          <button className="btn bg-cyan-500 text-white">
-            Learn Vocabularies
-          </button>
-        </Link>
+      <div className="mb-4 lg:flex lg:flex-row-reverse items-center justify-between">
         <a
           href="https://www.youtube.com/playlist?list=PLv63dFTP4Sjq6knRsZQI-bTnRE38cZZoy"
           className="hover:underline underline-offset-4 decoration-cyan-900 font-bold flex items-center gap-2"
@@ -146,8 +141,12 @@ const Tutorials = () => {
             <FaArrowRight></FaArrowRight>
           </span>
         </a>
+        <Link to="/letsLearn">
+          <button className="btn btn-sm lg:btn-md bg-cyan-500 text-white">
+            Learn Vocabularies
+          </button>
+        </Link>
       </div>
-      {/* <div className="mb-4"></div> */}
     </div>
   );
 };
