@@ -5,16 +5,16 @@ import slider5 from "../../assets/slider5.jpg";
 
 const Banner = () => {
   return (
-    <div className="carousel w-full rounded-xl mt-8">
+    <div className="carousel w-full rounded-xl mt-8 animate__animated animate__fadeInLeft">
       <div id="slide1" className="carousel-item relative w-full group">
         <div className="relative w-full overflow-hidden">
           <img
             src={slider5}
-            className="w-full object-cover h-[450px] lg:h-[800px] transition-transform duration-1000 group-hover:scale-105"
+            className="w-full object-cover h-[300px] lg:h-[800px] transition-transform duration-1000 group-hover:scale-105"
             alt="Slider Image"
           />
           {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-40 transition-all duration-1000 group-hover:bg-opacity-60"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-50 transition-all duration-1000"></div>
         </div>
         <div className="absolute left-5 right-5 top-1/2 hidden group-hover:flex -translate-y-1/2 transform justify-between">
           <a href="#slide4" className="btn btn-circle text-cyan-500 text-xl">
@@ -29,7 +29,7 @@ const Banner = () => {
         <div className="relative w-full overflow-hidden">
           <img
             src={slider1}
-            className="w-full object-cover h-[450px] lg:h-[800px] transition-transform duration-1000 group-hover:scale-105"
+            className="w-full object-cover h-[300px] lg:h-[800px] transition-transform duration-1000 group-hover:scale-105"
             alt="Slider Image"
           />
           {/* Dark overlay */}
@@ -48,7 +48,7 @@ const Banner = () => {
         <div className="relative w-full overflow-hidden">
           <img
             src={slider2}
-            className="w-full object-cover h-[450px] lg:h-[800px] transition-transform duration-1000 group-hover:scale-105"
+            className="w-full object-cover h-[300px] lg:h-[800px] transition-transform duration-1000 group-hover:scale-105"
             alt="Slider Image"
           />
           {/* Dark overlay */}
@@ -67,7 +67,7 @@ const Banner = () => {
         <div className="relative w-full overflow-hidden">
           <img
             src={slider}
-            className="w-full object-cover h-[450px] lg:h-[800px] transition-transform duration-1000 group-hover:scale-105"
+            className="w-full object-cover h-[300px] lg:h-[800px] transition-transform duration-1000 group-hover:scale-105"
             alt="Slider Image"
           />
           {/* Dark overlay */}

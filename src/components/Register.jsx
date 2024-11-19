@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import toast from "react-hot-toast";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -36,8 +37,8 @@ const Register = () => {
 
     // create user
     createUser(email, password)
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
+        toast.success("Registration Successful");
         e.target.reset();
         // update profile
         const profileInfo = { displayName: name, photoURL: photo };
@@ -47,9 +48,13 @@ const Register = () => {
           })
           .catch((error) => {
             setErrorMessage(error.message);
+            toast.error(error.code);
           });
       })
-      .catch((error) => setErrorMessage(error.code.split("/")[1]));
+      .catch((error) => {
+        setErrorMessage(error.code.split("/")[1]);
+        toast.error(error.code.split("/")[1]);
+      });
   };
 
   return (
@@ -129,7 +134,7 @@ const Register = () => {
             </button>
           </div>
           <div className="form-control mt-6 space-y-4">
-            <button className="btn btn-outline text-cyan-500">Register</button>
+            <button className="btn text-white bg-cyan-500">Register</button>
             <Link to="/">
               <button className="btn btn-outline w-full">Back to Home</button>
             </Link>

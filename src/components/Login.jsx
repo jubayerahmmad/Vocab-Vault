@@ -5,6 +5,7 @@ import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa6";
 import { CiLogin } from "react-icons/ci";
 import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const { loginUser, setUser, googleLogin } = useContext(AuthContext);
@@ -21,12 +22,12 @@ const Login = () => {
     //login
     loginUser(email, password)
       .then((result) => {
-        console.log(result.user);
+        toast.success("Login Successful");
         setUser(result.user);
         navigate(`${state ? state : "/"}`);
       })
       .catch((error) => {
-        // console.log(error.code);
+        toast.error(error.code.split("/")[1]);
         setErrorMessage(error.code.split("/")[1]);
       });
   };
@@ -38,6 +39,7 @@ const Login = () => {
         navigate(`${state ? state : "/"}`);
       })
       .catch((error) => {
+        toast.error(error.code.split("/")[1]);
         setErrorMessage(error.code.split("/")[1]);
       });
   };
@@ -108,7 +110,7 @@ const Login = () => {
             </label>
           </div>
           <div className="form-control mt-6 space-y-4">
-            <button className="btn btn-outline text-cyan-500">
+            <button className="btn text-white bg-cyan-500">
               <CiLogin size={24}></CiLogin> Login
             </button>
             <button

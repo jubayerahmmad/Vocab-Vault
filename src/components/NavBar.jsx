@@ -1,9 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/reading.png";
 import "../../src/navbar.css";
-import { CiLogin } from "react-icons/ci";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import toast from "react-hot-toast";
 const NavBar = () => {
   const { user, logOutUser } = useContext(AuthContext);
   // console.log(user);
@@ -11,10 +11,10 @@ const NavBar = () => {
   const handleLogout = () => {
     logOutUser()
       .then(() => {
-        console.log("log out successful");
+        toast.success("Log out successful");
       })
       .catch((error) => {
-        console.log(error.message);
+        toast.error(error.message);
       });
   };
 
@@ -106,17 +106,17 @@ const NavBar = () => {
                 <Link>
                   <button
                     onClick={handleLogout}
-                    className="btn btn-outline text-cyan-700 text-center btn-sm lg:btn-md"
+                    className="btn btn-outline font-bold text-white bg-cyan-500 text-center btn-sm lg:btn-md"
                   >
-                    <CiLogin size={24}></CiLogin> Log Out
+                    Log Out
                   </button>
                 </Link>
               </div>
             ) : (
               <>
                 <Link to="/login">
-                  <button className="btn btn-outline text-cyan-700 text-center btn-sm lg:btn-md">
-                    <CiLogin size={24}></CiLogin> Login
+                  <button className="btn btn-outline font-bold text-white bg-cyan-500 text-center btn-sm lg:btn-md">
+                    Login
                   </button>
                 </Link>
               </>

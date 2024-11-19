@@ -48,6 +48,9 @@ const LetsLearn = () => {
         <h1 className="text-3xl font-bold text-center my-6 animate__animated animate__fadeInDown">
           Tutorial
         </h1>
+        <p className="text-center text-xl text-gray-600 font-bold my-4 animate__animated animate__fadeInDown">
+          Everything you need to learn Spanish vocabulary, all in one place
+        </p>
         <div className="my-8 border rounded-xl p-4">
           <iframe
             height="615"
@@ -61,7 +64,7 @@ const LetsLearn = () => {
           ></iframe>
         </div>
         <Link to="/tutorials">
-          <button className="btn btn-outline text-cyan-500">
+          <button className="btn text-white bg-cyan-500">
             View More Tutorials
           </button>
         </Link>
