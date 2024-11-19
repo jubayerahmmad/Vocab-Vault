@@ -1,10 +1,11 @@
 import { useContext, useState } from "react";
 import logo from "../assets/reading.png";
 import { Helmet } from "react-helmet-async";
-import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa6";
+import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import toast from "react-hot-toast";
+import bg from "../assets/Animated Shape.svg";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -58,7 +59,10 @@ const Register = () => {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div
+      className="bg-gray-50 min-h-screen bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url("${bg}")` }}
+    >
       <Helmet>
         <title>Register | Vocab Vault</title>
       </Helmet>
@@ -71,7 +75,7 @@ const Register = () => {
 
       {/* form */}
 
-      <div className="card rounded-md bg-base-100 shadow-2xl w-full max-w-lg mx-auto">
+      <div className="card rounded-md bg-cyan-50 shadow-2xl w-full max-w-lg mx-auto">
         <form className="card-body" onSubmit={handleLogin}>
           {errorMessage && (
             <p className="font-bold text-red-500 text-center">{errorMessage}</p>

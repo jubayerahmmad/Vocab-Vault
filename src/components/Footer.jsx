@@ -1,5 +1,5 @@
 import { FaFacebook } from "react-icons/fa";
-import { FaInstagram, FaTwitter } from "react-icons/fa6";
+import { FaInstagram, FaLinkedin } from "react-icons/fa6";
 import logo from "../assets/reading.png";
 const Footer = () => {
   return (
@@ -14,14 +14,20 @@ const Footer = () => {
       </aside>
       <nav>
         <div className="grid grid-flow-col gap-4">
-          <a>
+          <a href="https://www.facebook.com/zubayerahmmad.1" target="_blank">
             <FaFacebook size={28}></FaFacebook>
           </a>
-          <a>
+          <a
+            href="https://www.instagram.com/zubayerrrrrrr/?hl=en"
+            target="_blank"
+          >
             <FaInstagram size={28}></FaInstagram>
           </a>
-          <a>
-            <FaTwitter size={28}></FaTwitter>
+          <a
+            href="https://www.linkedin.com/in/jubayer-ahmmad073/"
+            target="_blank"
+          >
+            <FaLinkedin size={28}></FaLinkedin>
           </a>
         </div>
       </nav>

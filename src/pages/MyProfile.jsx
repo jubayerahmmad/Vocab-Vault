@@ -41,7 +41,7 @@ const MyProfile = () => {
           <div className="mt-6 text-center">
             <Link
               to="/update-profile"
-              className="px-6 py-2 btn bg-cyan-500 text-white rounded-full hover:bg-cyan-700 transition duration-300"
+              className="px-6 py-2 btn bg-cyan-500 text-white hover:bg-cyan-700 transition duration-300"
             >
               Update Profile
             </Link>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { VscUnmute } from "react-icons/vsc";
 import Modal from "react-modal";
 
 Modal.setAppElement("#root");
@@ -49,6 +50,9 @@ const WordsCard = ({ words }) => {
             <span className="font-semibold">Part of Speech:</span>{" "}
             {part_of_speech}
           </p>
+          <p className="">
+            <span className="font-semibold">Difficulty:</span> {difficulty}
+          </p>
           <div className="flex flex-wrap gap-2">
             <button
               onClick={openModal}
@@ -60,7 +64,7 @@ const WordsCard = ({ words }) => {
               onClick={() => pronounceWord(word)}
               className="btn btn-sm btn-outline rounded-md"
             >
-              Pronounce
+              <VscUnmute size={20} />
             </button>
           </div>
         </div>

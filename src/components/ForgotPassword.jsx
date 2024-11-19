@@ -24,11 +24,15 @@ const ForgotPassword = () => {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-gray-50 min-h-screen flex items-center">
       <Helmet>
         <title>Reset Password | Vocab Vault</title>
       </Helmet>
-      <div className="card rounded-md bg-base-100 shadow-2xl w-full max-w-lg mx-auto">
+
+      <div className="card rounded-md bg-cyan-50 shadow-2xl w-full max-w-lg mx-auto">
+        <h3 className="p-4 text-center font-bold">
+          Enter your Valid Email to Reset Password.
+        </h3>
         <form className="card-body">
           <div className="form-control">
             <label className="label">

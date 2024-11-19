@@ -6,9 +6,6 @@ import { AuthContext } from "../providers/AuthProvider";
 import toast from "react-hot-toast";
 const NavBar = () => {
   const { user, logOutUser } = useContext(AuthContext);
-  const location = useLocation();
-  // console.log(location);
-  // console.log(user);
 
   const handleLogout = () => {
     logOutUser()
@@ -45,20 +42,20 @@ const NavBar = () => {
   );
 
   return (
-    <div className="bg-cyan-100 sticky top-0 z-10">
-      {user && location.pathname === "/" && (
+    <div className="sticky top-0 z-10 bg-cover bg-center">
+      {user && (
         <h3 className="font-bold text-3xl text-center p-2 italic">
-          Welcome Back, {user.displayName}!
+          Welcome, {user.displayName}!
         </h3>
       )}
       <div className="navbar bg-cyan-100 sticky top-0 z-10">
         <div className="w-11/12 mx-auto">
-          <div className="navbar-start flex">
+          <div className="navbar-start flex items-center">
             <div className="dropdown">
               <div
                 tabIndex={0}
                 role="button"
-                className="btn btn-ghost lg:hidden"
+                className="btn btn-ghost btn-sm lg:btn-md lg:hidden"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +105,7 @@ const NavBar = () => {
                 <Link>
                   <button
                     onClick={handleLogout}
-                    className="btn btn-outline font-bold text-white bg-cyan-500 text-center btn-sm lg:btn-md hover:bg-cyan-700 transition duration-300"
+                    className="btn font-bold text-white bg-cyan-500 text-center btn-sm lg:btn-md hover:bg-cyan-700 transition duration-300"
                   >
                     Log Out
                   </button>
@@ -117,7 +114,7 @@ const NavBar = () => {
             ) : (
               <>
                 <Link to="/login">
-                  <button className="btn btn-outline font-bold text-white bg-cyan-500 text-center btn-sm lg:btn-md hover:bg-cyan-700 transition duration-300">
+                  <button className="btn font-bold text-white bg-cyan-500 text-center btn-sm lg:btn-md hover:bg-cyan-700 transition duration-300">
                     Login
                   </button>
                 </Link>
