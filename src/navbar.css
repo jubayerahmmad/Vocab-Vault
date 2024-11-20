@@ -1,3 +1,4 @@
 .active {
   text-decoration: underline cyan 5px;
+  font-weight: 800;
 }

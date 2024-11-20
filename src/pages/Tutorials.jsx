@@ -11,7 +11,7 @@ const Tutorials = () => {
         <title>Tutorials | Vocab Vault</title>
       </Helmet>
       <CommonBanner></CommonBanner>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 my-8">
         {/* embedded video */}
         <div className="border rounded-xl p-4">
           <iframe
@@ -130,22 +130,22 @@ const Tutorials = () => {
           ></iframe>
         </div>
       </div>
-      <div className="mb-4 lg:flex lg:flex-row-reverse items-center justify-between">
-        <a
-          href="https://www.youtube.com/playlist?list=PLv63dFTP4Sjq6knRsZQI-bTnRE38cZZoy"
-          className="hover:underline underline-offset-4 decoration-cyan-900 font-bold flex items-center gap-2"
-          target="_blank"
-        >
-          Watch Full Playlist on YouTube{" "}
-          <span className="btn btn-xs text-cyan-500 btn-circle">
-            <FaArrowRight></FaArrowRight>
-          </span>
-        </a>
+      <div className="mb-4 flex items-center justify-between">
         <Link to="/letsLearn">
           <button className="btn btn-sm lg:btn-md bg-cyan-500 text-white">
             Learn Vocabularies
           </button>
         </Link>
+        <a
+          href="https://www.youtube.com/playlist?list=PLv63dFTP4Sjq6knRsZQI-bTnRE38cZZoy"
+          className="hover:underline underline-offset-4 decoration-cyan-900 font-bold flex items-center gap-2"
+          target="_blank"
+        >
+          Watch Full Playlist
+          <span className="btn btn-xs text-cyan-500 btn-circle">
+            <FaArrowRight></FaArrowRight>
+          </span>
+        </a>
       </div>
     </div>
   );

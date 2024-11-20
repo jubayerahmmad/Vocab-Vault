@@ -31,7 +31,7 @@ const ViewLesson = () => {
       </div>
       <div>
         <Link to="/letsLearn">
-          <button className="btn btn-md text-cyan-600 btn-outline mb-4 rounded-md">
+          <button className="btn btn-md bg-cyan-500 text-white mb-12 rounded-md">
             Back to Lesson
           </button>
         </Link>

@@ -18,11 +18,11 @@ const LetsLearn = () => {
 
       <div className="my-4">
         <h1 className="text-3xl font-bold text-center">Check Lessons</h1>
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 my-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6 my-6">
           {lessons?.map((lesson) => (
             <div
               key={lesson.id}
-              className="p-4 rounded-xl border border-cyan-700 lg:flex space-y-4 items-center justify-between animate__animated animate__fadeInLeft"
+              className="p-4 rounded-xl border border-cyan-700 2xl:flex space-y-4 items-center justify-between animate__animated animate__fadeInLeft"
             >
               <div>
                 <h1 className="text-xl lg:text-2xl font-bold">
@@ -48,15 +48,14 @@ const LetsLearn = () => {
         <h1 className="text-3xl font-bold text-center my-6 animate__animated animate__fadeInDown">
           Tutorial
         </h1>
-        <p className="text-center text-xl text-gray-600 font-bold my-4 animate__animated animate__fadeInDown">
+        <p className="text-center text-lg lg:text-xl text-gray-600 font-bold my-4 animate__animated animate__fadeInDown">
           Everything you need to learn Spanish vocabulary, all in one place
         </p>
         <div className="my-8 border rounded-xl p-4">
           <iframe
-            height="615"
             src="https://www.youtube.com/embed/kJQjXAVEWt0?si=PrcSfF4beFsGtWqA"
             title="YouTube video player"
-            className="w-full rounded-xl"
+            className="w-full rounded-xl h-96 lg:h-[600px]"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"

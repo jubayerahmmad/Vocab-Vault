@@ -15,12 +15,16 @@ const FAQs = () => {
       </h1>
       <div className="lg:flex gap-4 items-center rounded-lg border">
         <div className="p-4 lg:w-1/3">
-          <img className="h-[500px] w-full rounded-lg" src={faq} alt="" />
+          <img
+            className="h-96 lg:h-[500px] w-full rounded-lg"
+            src={faq}
+            alt=""
+          />
         </div>
         <div className="w-full p-4 lg:w-2/3 font-semibold">
           <Accordion>
             <AccordionItem className="bg-cyan-50">
-              <AccordionItemHeading className="text-2xl font-bold">
+              <AccordionItemHeading className="text-xl lg:text-2xl font-bold">
                 <AccordionItemButton>What is Vocab Vault?</AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
@@ -32,7 +36,7 @@ const FAQs = () => {
               </AccordionItemPanel>
             </AccordionItem>
             <AccordionItem className="bg-cyan-50">
-              <AccordionItemHeading className="text-2xl font-bold">
+              <AccordionItemHeading className="text-xl lg:text-2xl font-bold">
                 <AccordionItemButton>
                   How does Vocab Vault work?
                 </AccordionItemButton>
@@ -46,7 +50,7 @@ const FAQs = () => {
               </AccordionItemPanel>
             </AccordionItem>
             <AccordionItem className="bg-cyan-50">
-              <AccordionItemHeading className="text-2xl font-bold">
+              <AccordionItemHeading className="text-xl lg:text-2xl font-bold">
                 <AccordionItemButton>
                   How many words are in each Lesson?
                 </AccordionItemButton>
@@ -59,7 +63,7 @@ const FAQs = () => {
               </AccordionItemPanel>
             </AccordionItem>
             <AccordionItem className="bg-cyan-50">
-              <AccordionItemHeading className="text-2xl font-bold">
+              <AccordionItemHeading className="text-xl lg:text-2xl font-bold">
                 <AccordionItemButton>
                   Is Vocab Vault free to use?
                 </AccordionItemButton>
@@ -72,7 +76,7 @@ const FAQs = () => {
               </AccordionItemPanel>
             </AccordionItem>
             <AccordionItem className="bg-cyan-50">
-              <AccordionItemHeading className="text-2xl font-bold">
+              <AccordionItemHeading className="text-xl lg:text-2xl font-bold">
                 <AccordionItemButton>Who is this app for?</AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
@@ -83,7 +87,7 @@ const FAQs = () => {
               </AccordionItemPanel>
             </AccordionItem>
             <AccordionItem className="bg-cyan-50">
-              <AccordionItemHeading className="text-2xl font-bold">
+              <AccordionItemHeading className="text-xl lg:text-2xl font-bold">
                 <AccordionItemButton>
                   Do I need to create Account?
                 </AccordionItemButton>
@@ -95,7 +99,7 @@ const FAQs = () => {
               </AccordionItemPanel>
             </AccordionItem>
             <AccordionItem className="bg-cyan-50">
-              <AccordionItemHeading className="text-2xl font-bold">
+              <AccordionItemHeading className="text-xl lg:text-2xl font-bold">
                 <AccordionItemButton>
                   How to Create Account?
                 </AccordionItemButton>

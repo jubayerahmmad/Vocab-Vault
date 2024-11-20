@@ -1,17 +1,17 @@
-// import slider4 from "../assets/slider4.jpg";
+import me from "../assets/me.jpg";
 import { useLocation } from "react-router-dom";
 const CommonBanner = () => {
   const { pathname } = useLocation();
-  //   console.log(pathname);
+
   return (
     <div className="my-6 rounded-lg bg-cyan-600 p-12">
       <div className="inset-0 flex flex-col items-center justify-center text-center text-white animate__animated animate__fadeInDown">
         {pathname === "/letsLearn" ? (
           <>
-            <h2 className="text-4xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-2xl lg:text-4xl font-bold mb-4">
               Let’s Learn Spanish
             </h2>
-            <p className="text-gray-200 mb-4">
+            <p className="text-xs lg:text-sm text-gray-200 mb-4">
               Unlock your Spanish learning journey with Vocab Vault. Explore a
               wide range of interactive <br /> lessons, quizzes, and exercises
               tailored to help you master the Spanish language.
@@ -19,24 +19,34 @@ const CommonBanner = () => {
           </>
         ) : pathname === "/tutorials" ? (
           <>
-            <h2 className="text-4xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-2xl lg:text-4xl font-bold mb-4">
               Watch Tutorials
             </h2>
-            <p className="text-gray-200 mb-4">
+            <p className="text-xs lg:text-sm text-gray-200 mb-4">
               Explore a wide range of tutorials on various topics. From beginner
               to advanced, we've got you covered.
             </p>
           </>
         ) : (
           <>
-            <h2 className="text-4xl lg:text-4xl font-bold mb-4">About Us</h2>
-            <p className="text-gray-200 mb-4">
-              Vocab Vault is a platform dedicated to helping you learn Spanish.
-              Our interactive lessons, quizzes, and exercises are designed{" "}
-              <br /> to make your learning journey enjoyable and effective.
-              Whether you're a beginner or <br />
-              an advanced learner, we've got you covered.
-            </p>
+            <div className="card card-side bg-base-100 shadow-xl text-black">
+              <figure>
+                <img className="h-96" src={me} alt="Movie" />
+              </figure>
+              <div className="card-body text-left">
+                <h2 className="text-2xl lg:text-4xl font-bold mb-4">
+                  About Me
+                </h2>
+                <p className="text-xs lg:text-base text-gray-700 mb-4 max-w-3xl tracking-widest">
+                  Hi, I’m <strong>Zubayer Ahmmad</strong>, a 21-year-old student
+                  from Bangladesh with a strong passion for front-end web
+                  development.My journey into the tech world started with a deep
+                  curiosity to create interactive and user-friendly web
+                  applications. Currently, I am learning Front end technologies,
+                  and exploring Back-end technologies to broaden my skill set.
+                </p>
+              </div>
+            </div>
           </>
         )}
       </div>
