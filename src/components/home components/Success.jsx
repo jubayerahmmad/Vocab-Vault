@@ -25,7 +25,7 @@ const Success = () => {
     config: { duration: 3500 },
   });
   return (
-    <div>
+    <div className="animate__animated animate__fadeInLeft">
       <h1 className="text-3xl font-bold text-center mb-6">Success</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-6 rounded-lg">
         <div className="p-4 text-center border rounded-lg space-y-4">

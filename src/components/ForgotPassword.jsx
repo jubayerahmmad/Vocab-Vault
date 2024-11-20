@@ -29,7 +29,7 @@ const ForgotPassword = () => {
         <title>Reset Password | Vocab Vault</title>
       </Helmet>
 
-      <div className="card rounded-md bg-cyan-50 shadow-2xl w-full max-w-lg mx-auto">
+      <div className="card rounded-md bg-cyan-50 shadow-2xl w-full max-w-lg mx-auto animate__animated animate__fadeInLeft">
         <h3 className="p-4 text-center font-bold">
           Enter your Valid Email to Reset Password.
         </h3>

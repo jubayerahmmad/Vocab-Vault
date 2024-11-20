@@ -60,7 +60,7 @@ const NavBar = () => {
   return (
     <div className="sticky bg-cyan-100 top-0 z-10 bg-cover bg-center">
       {user && (
-        <h3 className="font-bold text-3xl text-center p-2 italic">
+        <h3 className="font-bold text-3xl text-center p-2 italic animate__animated animate__fadeInDown">
           Welcome, {user.displayName}!
         </h3>
       )}

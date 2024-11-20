@@ -54,13 +54,13 @@ const Login = () => {
 
   return (
     <div
-      className="bg-gray-50 min-h-screen bg-cover bg-center bg-no-repeat "
+      className="bg-gray-50 min-h-screen bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url("${bg}")` }}
     >
       <Helmet>
         <title>Login | Vocab Vault</title>
       </Helmet>
-      <div className="flex flex-col justify-center items-center gap-4 p-4 text-white">
+      <div className="flex flex-col justify-center items-center gap-4 p-4 text-white animate__animated animate__fadeInDown">
         <img className="w-24 h-24" src={logo} alt="" />
         <h1 className="text-3xl font-bold text-center italic">
           Welcome back !
@@ -72,7 +72,7 @@ const Login = () => {
 
       {/* form */}
 
-      <div className="card rounded-md bg-cyan-50 shadow-2xl w-full max-w-lg mx-auto">
+      <div className="card rounded-md bg-cyan-50 shadow-2xl w-full max-w-lg mx-auto animate__animated animate__fadeInLeft">
         <form className="card-body" onSubmit={handleLogin}>
           {errorMessage && (
             <p className="font-bold text-red-500 text-center">{errorMessage}</p>

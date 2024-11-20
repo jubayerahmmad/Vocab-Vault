@@ -14,7 +14,7 @@ const MyProfile = () => {
       <Helmet>
         <title>Tutorials | Vocab Vault</title>
       </Helmet>
-      <div className="min-h-screen flex justify-center items-center">
+      <div className="min-h-screen flex justify-center items-center animate__animated animate__fadeInLeft">
         <div className="max-w-2xl my-4 mx-auto bg-white shadow-md rounded-xl">
           <div className="bg-cyan-500 text-white rounded-xl">
             <img

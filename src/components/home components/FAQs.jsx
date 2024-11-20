@@ -9,7 +9,7 @@ import {
 import "react-accessible-accordion/dist/fancy-example.css";
 const FAQs = () => {
   return (
-    <div className="mb-12">
+    <div className="mb-12 animate__animated animate__fadeInLeft">
       <h1 className="text-3xl font-bold text-center mb-6">
         Frequently Asked Questions
       </h1>

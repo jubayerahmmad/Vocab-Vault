@@ -13,10 +13,10 @@ const AboutUs = () => {
       </Helmet>
       <CommonBanner></CommonBanner>
 
-      <section class=" my-12">
+      <section class=" my-12 animate__animated animate__fadeInLeft">
         <h2 className="text-3xl font-bold text-gray-800 text-center">Skills</h2>
         <div className="max-w-6xl mx-auto px-6 lg:px-8  my-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-5 animate__animated animate__fadeInLeft">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-5 ">
             {/* Skill Card 1*/}
             <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
               <h3 className="text-xl font-semibold text-gray-700 mb-2">
@@ -60,7 +60,7 @@ const AboutUs = () => {
         </div>
       </section>
       {/* Projects */}
-      <section className="mb-6 py-12">
+      <section className="mb-6 py-12 animate__animated animate__fadeInLeft">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">
             Projects
@@ -70,7 +70,7 @@ const AboutUs = () => {
             <div className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col">
               <img src={gadgets} alt="" className="w-full h-48 object-cover" />
               <div className="p-6 flex flex-col">
-                <div className="flex-grow">
+                <div className="flex-grow h-44">
                   <h3 className="text-xl font-semibold text-gray-700 mb-2">
                     Gadget Heaven
                   </h3>
@@ -81,7 +81,7 @@ const AboutUs = () => {
                 </div>
                 <a
                   href="https://gadgetsss.netlify.app/"
-                  className="text-cyan-600"
+                  className="text-cyan-600 hover:underline"
                 >
                   View Project
                 </a>
@@ -91,19 +91,19 @@ const AboutUs = () => {
             <div className="bg-white shadow-lg rounded-lg overflow-hidden ">
               <img src={vocab} alt="" className="w-full h-48 object-cover" />
               <div className="p-6 flex flex-col">
-                <div className="flex-grow">
+                <div className="flex-grow h-44">
                   <h3 className="text-xl font-semibold text-gray-700 mb-2">
                     Vocab Vault
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    A Spanish vocabulary learning app with cart built using
-                    React and dynamic routing, also integrated Authentication
-                    using Firebase Authentication
+                    A Spanish vocabulary learning app built with React and
+                    dynamic routing, also integrated Authentication using
+                    Firebase Authentication.
                   </p>
                 </div>
                 <a
                   href="https://vocab-vault-spanish-learning.netlify.app/"
-                  className="text-cyan-600"
+                  className="text-cyan-600 hover:underline"
                 >
                   View Project
                 </a>
@@ -113,7 +113,7 @@ const AboutUs = () => {
             <div className="bg-white shadow-lg rounded-lg overflow-hidden">
               <img src={dreamxi} alt="" className="w-full h-48 object-cover" />
               <div className="p-6 flex flex-col">
-                <div className="flex-grow">
+                <div className="flex-grow h-44">
                   <h3 className="text-xl font-semibold text-gray-700 mb-2">
                     Dream XI Builder
                   </h3>
@@ -124,7 +124,7 @@ const AboutUs = () => {
                 </div>
                 <a
                   href="https://dream-xi-builder.netlify.app/"
-                  className="text-cyan-600"
+                  className="text-cyan-600 hover:underline"
                 >
                   View Project
                 </a>
