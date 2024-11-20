@@ -1,52 +1,52 @@
 [
   {
     "id": "1",
-    "difficulty": "easy",
+    "topic": "Greetings",
     "lesson_no": 1
   },
   {
     "id": "2",
-    "difficulty": "easy",
+    "topic": "Meals and Snacks",
     "lesson_no": 2
   },
   {
     "id": "3",
-    "difficulty": "easy",
+    "topic": "Home furniture",
     "lesson_no": 3
   },
   {
     "id": "4",
-    "difficulty": "easy",
+    "topic": "Number and Time",
     "lesson_no": 4
   },
   {
     "id": "5",
-    "difficulty": "medium",
+    "topic": "Colors",
     "lesson_no": 5
   },
   {
     "id": "6",
-    "difficulty": "medium",
+    "topic": "Family",
     "lesson_no": 6
   },
   {
     "id": "7",
-    "difficulty": "medium",
+    "topic": "Directions",
     "lesson_no": 7
   },
   {
     "id": "8",
-    "difficulty": "medium",
+    "topic": "Verbs",
     "lesson_no": 8
   },
   {
     "id": "9",
-    "difficulty": "hard",
+    "topic": "Season",
     "lesson_no": 9
   },
   {
     "id": "10",
-    "difficulty": "hard",
+    "topic": "Sports",
     "lesson_no": 10
   }
 ]

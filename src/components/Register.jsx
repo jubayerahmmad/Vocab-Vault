@@ -41,6 +41,7 @@ const Register = () => {
       .then(() => {
         toast.success("Registration Successful");
         e.target.reset();
+
         // update profile
         const profileInfo = { displayName: name, photoURL: photo };
         updateUserProfile(profileInfo)
@@ -104,7 +105,9 @@ const Register = () => {
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold">Email</span>
+              <span className="label-text font-semibold">
+                Email <span className="text-red-500">*</span>
+              </span>
             </label>
             <input
               type="email"
@@ -116,7 +119,9 @@ const Register = () => {
           </div>
           <div className="form-control relative">
             <label className="label">
-              <span className="label-text font-semibold">Password</span>
+              <span className="label-text font-semibold">
+                Password <span className="text-red-500">*</span>
+              </span>
             </label>
             <input
               type={showPassword ? "text" : "password"}
@@ -146,7 +151,7 @@ const Register = () => {
         </form>
 
         <p className="text-center p-6">
-          Already Have an Account?
+          Already Have an Account?{" "}
           <Link to="/login" className="font-bold text-cyan-950">
             Login
           </Link>

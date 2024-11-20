@@ -7,7 +7,6 @@ import { useState } from "react";
 
 const ForgotPassword = () => {
   const location = useLocation();
-  // console.log(location);
   const [email, setEmail] = useState(location.state?.email || "");
   // const email = location.state?.email;
 

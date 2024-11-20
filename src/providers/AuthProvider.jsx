@@ -23,7 +23,6 @@ const AuthProvider = ({ children }) => {
   };
 
   // update profile
-
   const updateUserProfile = (profileInfo) => {
     setLoader(true);
     return updateProfile(auth.currentUser, profileInfo);
@@ -34,8 +33,8 @@ const AuthProvider = ({ children }) => {
     setLoader(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
-  // login user with google
 
+  // login user with google
   const googleProvider = new GoogleAuthProvider();
   const googleLogin = () => {
     setLoader(true);
@@ -48,10 +47,10 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
+  // authState
   useEffect(() => {
     const unSubscrbe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
-        // console.log(currentUser);
         setUser(currentUser);
       } else {
         setUser(null);

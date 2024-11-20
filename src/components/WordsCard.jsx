@@ -8,7 +8,7 @@ const WordsCard = ({ words }) => {
 
   const openModal = () => setModalIsOpen(true);
   const closeModal = () => setModalIsOpen(false);
-  //   console.log(word);
+
   const {
     word,
     pronunciation,
@@ -21,13 +21,13 @@ const WordsCard = ({ words }) => {
 
   const pronounceWord = (word) => {
     const utterance = new SpeechSynthesisUtterance(word);
-    utterance.lang = "es-ES"; // Spanish language code
+    utterance.lang = "es-ES";
     window.speechSynthesis.speak(utterance);
   };
   return (
     <div>
       <div
-        className={`card backdrop-blur-xl shadow-md animate__animated animate__fadeInLeft ${
+        className={`card backdrop-blur-xl text-center shadow-md animate__animated animate__fadeInLeft ${
           difficulty === "easy"
             ? "bg-green-200"
             : difficulty === "medium"
@@ -39,21 +39,18 @@ const WordsCard = ({ words }) => {
           <h2 className="text-2xl font-extrabold italic">
             {word.toUpperCase()}
           </h2>
-          <p className="">
+          <p>
             <span className="font-semibold">Pronunciation:</span>{" "}
             {pronunciation}
           </p>
-          <p className="">
+          <p>
             <span className="font-semibold">Meaning:</span> {meaning}
           </p>
-          <p className="">
+          <p>
             <span className="font-semibold">Part of Speech:</span>{" "}
             {part_of_speech}
           </p>
-          <p className="">
-            <span className="font-semibold">Difficulty:</span> {difficulty}
-          </p>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap justify-center gap-2">
             <button
               onClick={openModal}
               className="btn btn-sm btn-outline rounded-md"
@@ -73,23 +70,23 @@ const WordsCard = ({ words }) => {
       {/* Modal (react-modal) */}
 
       <Modal
-        isOpen={modalIsOpen} // Boolean to control modal visibility
-        onRequestClose={closeModal} // Function to handle closing the modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
         style={{
           overlay: {
-            backgroundColor: "rgba(0, 0, 0, 0.75)", // Overlay dark background
-            display: "flex", // Flexbox to center content
-            justifyContent: "center", // Center horizontally
-            alignItems: "center", // Center vertically
-            zIndex: 9999, // Ensure the modal is on top
+            backgroundColor: "rgba(0, 0, 0, 0.75)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 9999,
           },
           content: {
             padding: "20px",
-            height: "300px",
-            maxWidth: "500px", // Limit the width of the modal
-            margin: "auto", // Ensure it's centered horizontally
+            height: "350px",
+            maxWidth: "500px",
+            margin: "auto",
             borderRadius: "10px",
-            backgroundColor: "white", // Modal background color
+            backgroundColor: "white",
           },
         }}
         contentLabel="Centered Modal"

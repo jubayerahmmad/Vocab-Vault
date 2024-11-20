@@ -22,19 +22,19 @@ const LetsLearn = () => {
           {lessons?.map((lesson) => (
             <div
               key={lesson.id}
-              className="p-4 rounded-xl border border-cyan-700 2xl:flex space-y-4 items-center justify-between animate__animated animate__fadeInLeft"
+              className="p-4 rounded-xl border border-cyan-700 2xl:flex items-center space-y-4 2xl:space-y-0 justify-between animate__animated animate__fadeInLeft"
             >
               <div>
                 <h1 className="text-xl lg:text-2xl font-bold">
                   Lesson {lesson.lesson_no}
                 </h1>
-                <p className="font-semibold text-gray-500">
-                  Difficulty: {lesson.difficulty}
+                <p className="text-sm font-semibold text-gray-500">
+                  {lesson.topic}
                 </p>
               </div>
               <div>
                 <Link to={`/lesson/${lesson.id}`}>
-                  <button className="btn btn-sm lg:btn-md btn-outline text-cyan-500 ">
+                  <button className="btn btn-sm 2xl:btn-md btn-outline text-cyan-500 ">
                     Check Lesson
                   </button>
                 </Link>
