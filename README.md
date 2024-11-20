@@ -1,4 +1,4 @@
-# Project Name: Vocab Vault - A Vocabulary Learning Application
+# Vocab Vault - A Vocabulary Learning Application
 
 ## Purpose
 
