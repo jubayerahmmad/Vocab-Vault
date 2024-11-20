@@ -62,9 +62,7 @@ const Login = () => {
       </Helmet>
       <div className="flex flex-col justify-center items-center gap-4 p-4 text-white animate__animated animate__fadeInDown">
         <img className="w-24 h-24" src={logo} alt="" />
-        <h1 className="text-3xl font-bold text-center italic">
-          Welcome back !
-        </h1>
+        <h1 className="text-3xl font-bold text-center italic">Welcome!</h1>
         <p className="text-center font-bold text-2xl">
           Log in to access your vocabulary vault!
         </p>
