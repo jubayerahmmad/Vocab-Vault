@@ -11,16 +11,13 @@ const NavBar = () => {
   const { user, logOutUser } = useContext(AuthContext);
 
   const handleLogout = () => {
-    const confirmLogOut = window.confirm("Are you Sure You want to Log Out?");
-    if (confirmLogOut) {
-      logOutUser()
-        .then(() => {
-          toast.success("Log out successful");
-        })
-        .catch((error) => {
-          toast.error(error.message);
-        });
-    }
+    logOutUser()
+      .then(() => {
+        toast.success("Log out successful");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
   };
 
   const links = (

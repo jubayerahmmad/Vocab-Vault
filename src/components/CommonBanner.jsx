@@ -29,21 +29,26 @@ const CommonBanner = () => {
           </>
         ) : (
           <>
-            <div className="card card-side bg-base-100 shadow-xl text-black">
+            <div className="card card-side flex-col lg:flex-row bg-base-100 shadow-xl text-black">
               <figure>
-                <img className="h-96" src={me} alt="Movie" />
+                <img
+                  className="h-72 lg:h-96 rounded-2xl lg:rounded-none object-cover"
+                  src={me}
+                  alt=""
+                />
               </figure>
               <div className="card-body text-left">
                 <h2 className="text-2xl lg:text-4xl font-bold mb-4">
                   About Me
                 </h2>
                 <p className="text-xs lg:text-base text-gray-700 mb-4 max-w-3xl tracking-widest">
-                  Hi, I’m <strong>Zubayer Ahmmad</strong>, a 21-year-old student
-                  from Bangladesh with a strong passion for front-end web
-                  development.My journey into the tech world started with a deep
-                  curiosity to create interactive and user-friendly web
-                  applications. Currently, I am learning Front end technologies,
-                  and exploring Back-end technologies to broaden my skill set.
+                  Assalamu Alaikum, I’m <strong>Zubayer Ahmmad</strong>, a
+                  21-year-old student from Bangladesh with a strong passion for
+                  front-end web development.My journey into the tech world
+                  started with a deep curiosity to create interactive and
+                  user-friendly web applications. Currently, I am learning Front
+                  end technologies, and exploring Back-end technologies to
+                  broaden my skill set.
                 </p>
               </div>
             </div>

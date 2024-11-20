@@ -4,6 +4,7 @@ import Banner from "../components/home components/Banner";
 import FAQs from "../components/home components/FAQs";
 import Success from "../components/home components/Success";
 import "animate.css";
+import Testimonials from "../components/home components/Testimonials";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <About></About>
       <Success></Success>
       <FAQs></FAQs>
+      <Testimonials></Testimonials>
     </div>
   );
 };
