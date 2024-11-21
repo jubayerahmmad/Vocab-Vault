@@ -20,7 +20,7 @@ const ViewLesson = () => {
     setLesson(filterdLesson);
   }, [lessonNumber]);
 
-  // difficullty wise words dispp
+  // difficullty wise words display
   const handleDifficulty = (difficulty) => {
     const mappedLesson = lessons.map((lesson) => {
       return lesson;

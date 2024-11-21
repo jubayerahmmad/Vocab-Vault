@@ -27,7 +27,7 @@ const WordsCard = ({ words }) => {
   return (
     <div>
       <div
-        className={`card backdrop-blur-xl text-center shadow-md animate__animated animate__fadeInLeft ${
+        className={`card backdrop-blur-xl text-center shadow-xl animate__animated animate__fadeInLeft ${
           difficulty === "easy"
             ? "bg-green-200"
             : difficulty === "medium"

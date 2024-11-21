@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import { FaHome, FaInfoCircle, FaPlayCircle } from "react-icons/fa";
 import { FaBook } from "react-icons/fa6";
 import { CgProfile } from "react-icons/cg";
+import Marquee from "react-fast-marquee";
 const NavBar = () => {
   const { user, logOutUser } = useContext(AuthContext);
 
@@ -57,9 +58,11 @@ const NavBar = () => {
   return (
     <div className="sticky bg-cyan-100 top-0 z-10 bg-cover bg-center">
       {user && (
-        <h3 className="font-bold text-3xl text-center p-2 italic animate__animated animate__fadeInDown">
-          Welcome, {user.displayName}!
-        </h3>
+        <Marquee direction="right" speed={150}>
+          <h3 className="font-bold text-xl lg:text-3xl text-black text-center p-2 italic animate__animated animate__fadeInDown">
+            Welcome, {user.displayName}!
+          </h3>
+        </Marquee>
       )}
       <div className="navbar  sticky top-0 z-10">
         <div className="w-11/12 mx-auto">

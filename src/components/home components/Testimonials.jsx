@@ -1,6 +1,7 @@
 import ReactStars from "react-rating-stars-component";
 import { Carousel } from "react-responsive-carousel";
 const Testimonials = () => {
+  // testimonial data
   const testimonials = [
     {
       id: 1,

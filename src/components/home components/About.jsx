@@ -5,7 +5,7 @@ const About = () => {
     <div className="my-12 animate__animated animate__fadeInLeft">
       <h1 className="text-3xl font-bold text-center ">About Us</h1>
       <div className="p-6 rounded-lg my-8 border-2 space-y-4 lg:flex items-center gap-6 animate__animated animate__fadeInDown">
-        <div className="">
+        <div>
           <img
             className="rounded-lg animate__animated animate__fadeInLeft animate__delay-1s"
             src={homeAbout}

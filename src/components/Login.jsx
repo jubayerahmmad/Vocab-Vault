@@ -54,7 +54,7 @@ const Login = () => {
 
   return (
     <div
-      className="bg-gray-50 min-h-screen bg-cover bg-center bg-no-repeat"
+      className="bg-gray-50 min-h-screen bg-cover bg-no-repeat"
       style={{ backgroundImage: `url("${bg}")` }}
     >
       <Helmet>
