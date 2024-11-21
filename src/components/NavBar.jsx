@@ -8,6 +8,7 @@ import { FaHome, FaInfoCircle, FaPlayCircle } from "react-icons/fa";
 import { FaBook } from "react-icons/fa6";
 import { CgProfile } from "react-icons/cg";
 import Marquee from "react-fast-marquee";
+import { BsMenuButtonWideFill } from "react-icons/bs";
 const NavBar = () => {
   const { user, logOutUser } = useContext(AuthContext);
 
@@ -73,20 +74,7 @@ const NavBar = () => {
                 role="button"
                 className="btn btn-ghost btn-sm lg:btn-md xl:hidden"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg>
+                <BsMenuButtonWideFill size={20}></BsMenuButtonWideFill>
               </div>
               <ul
                 tabIndex={0}

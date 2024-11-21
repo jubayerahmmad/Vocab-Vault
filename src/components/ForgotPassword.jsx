@@ -13,9 +13,9 @@ const ForgotPassword = () => {
   const handleResetPassword = () => {
     sendPasswordResetEmail(auth, email)
       .then(() => {
+        toast.success(`Reset Email Sent to ${email}`);
         window.open("https://mail.google.com", "_blank");
         // window.location.href = 'https://mail.google.com';
-        toast.success(`Reset Email Sent to ${email}`);
       })
       .catch((error) => {
         toast.error(error.code);
