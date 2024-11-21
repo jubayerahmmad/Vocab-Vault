@@ -43,7 +43,7 @@ const Testimonials = () => {
           What Our Users Say
         </h2>
 
-        <div className="m-6">
+        <div className="m-6 ring-2 ring-cyan-500">
           <Carousel
             showThumbs={false}
             showStatus={false}
@@ -54,7 +54,7 @@ const Testimonials = () => {
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="bg-cyan-100 shadow-lg rounded-lg p-8 flex flex-col items-center space-y-4 h-full"
+                className="bg-cyan-100 shadow-lg p-8 flex flex-col items-center space-y-4 h-full"
               >
                 <div className="avatar">
                   <div className="ring-cyan-500 ring-offset-base-100 w-24 rounded-full ring ring-offset-2">

@@ -7,22 +7,22 @@ const Success = () => {
   const user = useSpring({
     from: { number: 0 },
     to: { number: 1500 },
-    config: { duration: 2500 },
+    config: { duration: 4000 },
   });
   const vocabulary = useSpring({
-    from: { number: 3500 },
+    from: { number: 1500 },
     to: { number: 4000 },
-    config: { duration: 2000 },
+    config: { duration: 4000 },
   });
   const tutorials = useSpring({
     from: { number: 0 },
     to: { number: 25 },
-    config: { duration: 3000 },
+    config: { duration: 2500 },
   });
   const lessons = useSpring({
     from: { number: 0 },
     to: { number: 30 },
-    config: { duration: 3500 },
+    config: { duration: 3000 },
   });
   return (
     <div className="animate__animated animate__fadeInLeft">
