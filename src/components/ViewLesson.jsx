@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import WordsCard from "./WordsCard";
+import { Helmet } from "react-helmet-async";
 
 const ViewLesson = () => {
   const [lesson, setLesson] = useState([]);
@@ -40,6 +41,9 @@ const ViewLesson = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Lesson {`${lessonNumber}`} | Vocab Vault</title>
+      </Helmet>
       <h1 className="text-3xl font-bold text-center my-4 underline decoration-cyan-400 underline-offset-2 animate__animated animate__fadeInDown">
         Lesson No - {lessonNumber}
       </h1>
